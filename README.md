@@ -12,10 +12,10 @@
     "timestamp": 1543402251708,
 }
 ```
-```status```:
-```err_no```:
-```msg```:
-```timestamp```:    
+```status```: 
+```err_no```: 
+```msg```: 
+```timestamp```:     
 
 
 #### Limits
