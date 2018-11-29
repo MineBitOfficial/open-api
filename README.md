@@ -1,6 +1,6 @@
-#MineBit APIs
+# MineBit APIs
 
-####General Descriptions for All Endpoints
+#### General Descriptions for All Endpoints
 ---
 * All endpoints will return as in json format
 * The return values of all endpoints will include but not limited to :
@@ -18,15 +18,15 @@
 ```timestamp```:    
 
 
-####Limits
+#### Limits
 ---
 * All endpoints can not be requested over 60 times per minute
 
-####Parameters
+#### Parameters
 ---
 * Paramenters can be passed by either GET method or POST method
 
-####Endpoints
+#### Endpoints
 ---
 <details><summary>Exchange information</summary>
 <p>
