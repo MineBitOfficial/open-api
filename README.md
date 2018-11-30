@@ -13,46 +13,48 @@
 }
 ```
 ```status```:    
-Status | Description
------------- | ------------
-success | Successful request
-fail | failed request
 
-```err_no```:    
-err_no | Description
------------- | ------------
-99999 | Signature not match
-99998 | Expired signature
-99997 | Missing parameters
-99996 | Unathorized accesskey
-99995 | Unexpected parameters 
-99994 | ?暂不支持该类型
-99993 | Request timeout
-99992 | Reqeust too frequently
+Status | Description       
+------------ | ------------   
+success | Successful request    
+fail | failed request    
+
+```err_no```:        
+  
+err_no | Description   
+------------ | ------------    
+99999 | Signature not match      
+99998 | Expired signature     
+99997 | Missing parameters     
+99996 | Unathorized accesskey    
+99995 | Unexpected parameters     
+99994 | ?暂不支持该类型    
+99993 | Request timeout      
+99992 | Reqeust too frequently     
 
 
-```msg```:    
-msg | Description
------------- | ------------
-??? | ??? 
+```msg```:       
+msg | Description    
+------------ | ------------    
+??? | ???           
 
-```timestamp```:     
-???
+```timestamp```:          
+???   
 
 
 #### Limits
 
-* All endpoints can not be requested over 60 times per minute
+* All endpoints can not be requested over 60 times per minute      
 
 #### Parameters
 
-* Paramenters can be passed by either GET method or POST method
+* Paramenters can be passed by either GET method or POST    method      
 
 #### Public Endpoints
 
 <details><summary>Exchange information</summary>
-    /openapi/v1/market/exchangeInfo
-Get exchange general information
+    /openapi/v1/market/exchangeInfo    
+Get exchange general information    
 
 Parameters:
 ```
