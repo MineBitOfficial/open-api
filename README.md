@@ -50,7 +50,9 @@ Respone massage
 ### Public Endpoints
 
 <details><summary>Exchange information</summary>
+
     /openapi/v1/market/exchangeInfo    
+
 Get exchange general information    
 
 Parameters:
@@ -623,7 +625,7 @@ Parameter:
     "price"     : "price",
     "amount"    : "amount",
     "symbol"    : "trading pair",
-    "type"      : 1,  // 1 限价值, 2 市价值 (optional)
+    "type"      : 1,  // 1 limit order, 2 market order (optional)
     "side"      : 0,  // 0=>all, 1=>for buying, 2=>for selling 
 }
 ```
@@ -736,7 +738,7 @@ Parameter:
     "symbol"    : "trading pair",
     "offset"    : 0, 
     "limit"     : 10, // how much entries will be return
-    "type"      : 1,  // 1 先价值, 2 市价值 (optional)
+    "type"      : 1,  // 1 limit order, 2 market order (optional)
     "side"      : 0,  // 0=>all, 1=>for buying, 2=>for selling 
 }
 ```
