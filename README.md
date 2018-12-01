@@ -1,6 +1,6 @@
 # MineBit APIs
 
-#### General Descriptions for All Endpoints
+### General Descriptions for All Endpoints
 
 * All endpoints will return as in json format
 * The return values of all endpoints will include but not limited to :
@@ -42,15 +42,15 @@ msg | Description
 ???   
 
 
-#### Limits
+### Limits
 
 * All endpoints can not be requested over 60 times per minute      
 
-#### Parameters
+### Parameters
 
 * Paramenters can be passed by either GET method or POST    method      
 
-#### Public Endpoints
+### Public Endpoints
 
 <details><summary>Exchange information</summary>
     /openapi/v1/market/exchangeInfo    
@@ -435,8 +435,85 @@ Respones:
 
 </details>
 
+<details><summary>行情</summary>
+    POST /openapi/v1/market/quote
+行情
 
-#### Private Endpoints
+Parameters:
+```
+{
+    "symbol" : "eth_btc"
+}
+```
+
+Respones:
+```
+{
+    "status": "success",
+    "err_no": 0,
+    "msg": "success",
+    "data": [
+        {
+            "close": 9,
+            "vol": 81.355,
+            "amount": 81.355,
+            "count": 69,
+            "high": 13,
+            "low": 0.000001,
+            "open": 0.01,
+            "symbol": "eth_btc",
+            "buy": 6,
+            "sell": 9
+        }
+    ]
+}
+```
+
+</details>
+
+<details><summary>Depth</summary>
+    openapi/v1/market/depth
+Depth
+
+Parameters:
+```
+{
+    "symbol" : "eth_btc",
+    "type"   : "1", 
+    "side"   : "0"
+}
+```
+
+Respones:
+```
+{
+    "status": "success",
+    "err_no": 0,
+    "msg": "get depth success",
+    "data": {
+        "depth": {
+            "buy": [
+                {
+                    "price": 0.05,
+                    "amount": 9.807
+                }
+            ],
+            "sell": [
+                {
+                    "price": 0.1,
+                    "amount": 1.029
+                }
+            ]
+        }
+    }
+}
+```
+
+
+
+</details>
+
+### Private Endpoints
 
 
 <details><summary>Unexcuted Orders Detail</summary>
@@ -523,3 +600,158 @@ Respones:
 ```
 
 </details>
+
+
+
+<details><summary>Make Order</summary>
+    POST /openapi/v1/trade/order
+Make order
+
+Parameter:
+```
+{
+    "accesskey" : "access key",
+    "timestamp" : "timestamp",
+    "signature" : "signature",
+    "price"     : "price",
+    "amount"    : "amount",
+    "symbol"    : "trading pair",
+    "type"      : 1,  // 1 先价值, 2 市价值 (optional)
+    "side"      : 0,  // 0=>all, 1=>for buying, 2=>for selling 
+}
+```
+
+Respones:
+```
+{
+    "status": "success",
+    "err_no": 0,
+    "msg": "put order success",
+    "data": {
+        "error": null,
+        "result": {
+            "order_id": 116783
+        },
+        "id": 1534590591
+    }
+}
+```
+
+</details>
+
+
+
+<details><summary>Cancel Order</summary>
+    POST /openapi/v1/trade/cancel_order
+Cancel order by order id
+
+Parameter:
+```
+{
+    "accesskey" : "access key",
+    "timestamp" : "timestamp",
+    "signature" : "signature",
+    "order_id"  : "order id",
+    "symbol"    : "trading pair",
+}
+```
+
+Respones:
+```
+{
+    "status": "success",
+    "err_no": 0,
+    "msg": "put order success",
+    "data": {
+        "error": null,
+        "result": {
+            "order_id": 116783
+        },
+        "id": 1534590591
+    }
+}
+```
+
+</details>
+
+
+<details><summary>Get Balance</summary>
+    POST /openapi/v1/userasset/balances
+Get balance
+
+Parameter:
+```
+{
+    "accesskey" : "access key",
+    "timestamp" : "timestamp",
+    "signature" : "signature",
+    "coin"      : "coin",
+}
+```
+
+Respones:
+```
+{
+    "status": "success",
+    "err_no": 0,
+    "msg": "get user total balance success.",
+    "data": [
+        {
+            "coinname": "eos",
+            "coin_amount": "0",
+            "coin_trade_frozen": "0"
+        },
+    ]
+}
+```
+
+</details>
+
+
+
+<details><summary>Get Finished Orders</summary>
+    POST /openapi/v1/trade/finished_orders
+Get Finished_orders
+
+Parameter:
+```
+{
+    "accesskey" : "access key",
+    "timestamp" : "timestamp",
+    "signature" : "signature",
+    "order_id"  : "order id",
+    "symbol"    : "trading pair",
+    "offset"    : 0, 
+    "limit"     : 10, // how much entries will be return
+    "type"      : 1,  // 1 先价值, 2 市价值 (optional)
+    "side"      : 0,  // 0=>all, 1=>for buying, 2=>for selling 
+}
+```
+
+Respones:
+```
+{
+    "status": "success",
+    "err_no": 0,
+    "msg": "get finished orders success.",
+    "data": [
+        {
+            "side": 2,
+            "addtime": 1534677163694,
+            "type": 1,
+            "price": "0.5",
+            "avg_price": 0.093,
+            "amount": "1",
+            "symbol": "eth_btc",
+            "finishtime": 1534924649050,
+            "status": 1,
+            "deal_amount": "0.068122",
+            "order_id": 116875
+        }
+    ]
+}
+```
+
+</details>
+
+
