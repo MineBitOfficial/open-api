@@ -28,7 +28,7 @@ err_no | Description
 99997 | Missing parameters     
 99996 | Unathorized accesskey    
 99995 | Unexpected parameters     
-99994 | ?暂不支持该类型    
+99994 | Unsupported parameter type    
 99993 | Request timeout      
 99992 | Reqeust too frequently     
 
