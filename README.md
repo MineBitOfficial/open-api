@@ -34,12 +34,9 @@ err_no | Description
 
 
 ```msg```:       
-msg | Description    
------------- | ------------    
-??? | ???           
+Respone massage         
 
 ```timestamp```:          
-???   
 
 
 ### Limits
@@ -268,11 +265,11 @@ Respones:
 ```
 </details>
 
-<details><summary>?成交记录</summary>
+<details><summary>Recent Trading Records</summary>
 
     /openapi/v1/market/transaction_record
 
-成交记录接口.
+Get recent trading records, 100 at most.
 
 Parameters:
 ``` 
@@ -305,6 +302,7 @@ Respones:
 <details><summary>All Market Pairs</summary>
 
     /openapi/v1/market/products
+
 Get all available market pairs.
 
 Parameters:
@@ -435,9 +433,11 @@ Respones:
 
 </details>
 
-<details><summary>行情</summary>
+<details><summary>Markets Summary</summary>
+
     POST /openapi/v1/market/quote
-行情
+
+Get daily markets summary
 
 Parameters:
 ```
@@ -472,7 +472,9 @@ Respones:
 </details>
 
 <details><summary>Depth</summary>
+
     openapi/v1/market/depth
+
 Depth
 
 Parameters:
@@ -519,6 +521,7 @@ Respones:
 <details><summary>Unexcuted Orders Detail</summary>
 
     POST /openapi/v1/trade/order_info
+
 Get unexcuted orders detail
 
 Parameters:
@@ -560,7 +563,9 @@ Respones:
 </details>
 
 <details><summary>Query Unexcuted Orders</summary>
+
     POST /openapi/v1/trade/pending_orders
+
 query unexcuted orders
 
 Parameters:
@@ -573,7 +578,7 @@ Parameters:
     "symbol"    : "trading pair",
     "offset"    : 0, 
     "limit"     : 10, // how much entries will be return
-    "type"      : 1,  // 1 先价值, 2 市价值 (optional)
+    "type"      : 1,  // 1 限价值, 2 市价值 (optional)
     "side"      : 0,  // 0=>all, 1=>for buying, 2=>for selling 
 }
 ```
@@ -604,7 +609,9 @@ Respones:
 
 
 <details><summary>Make Order</summary>
+
     POST /openapi/v1/trade/order
+
 Make order
 
 Parameter:
@@ -616,7 +623,7 @@ Parameter:
     "price"     : "price",
     "amount"    : "amount",
     "symbol"    : "trading pair",
-    "type"      : 1,  // 1 先价值, 2 市价值 (optional)
+    "type"      : 1,  // 1 限价值, 2 市价值 (optional)
     "side"      : 0,  // 0=>all, 1=>for buying, 2=>for selling 
 }
 ```
@@ -642,7 +649,9 @@ Respones:
 
 
 <details><summary>Cancel Order</summary>
+
     POST /openapi/v1/trade/cancel_order
+
 Cancel order by order id
 
 Parameter:
@@ -676,7 +685,9 @@ Respones:
 
 
 <details><summary>Get Balance</summary>
+
     POST /openapi/v1/userasset/balances
+
 Get balance
 
 Parameter:
@@ -710,7 +721,9 @@ Respones:
 
 
 <details><summary>Get Finished Orders</summary>
+
     POST /openapi/v1/trade/finished_orders
+
 Get Finished_orders
 
 Parameter:
