@@ -39,6 +39,9 @@ Response message
 ```timestamp```:          
 
 
+### Base URL
+* http://api.minebit.com/openapi
+
 ### Limits
 
 * All endpoints can not be requested over 60 times per minute      
