@@ -26,7 +26,7 @@ err_no | Description
 99999 | Signature not match      
 99998 | Expired signature     
 99997 | Missing parameters     
-99996 | Unathorized accesskey    
+99996 | unauthorized accesskey    
 99995 | Unexpected parameters     
 99994 | Unsupported parameter type    
 99993 | Request timeout      
@@ -34,7 +34,7 @@ err_no | Description
 
 
 ```msg```:       
-Respone massage         
+Response message         
 
 ```timestamp```:          
 
@@ -45,7 +45,7 @@ Respone massage
 
 ### Parameters
 
-* Paramenters can be passed by either GET method or POST    method      
+* Parameters can be passed by either GET method or POST    method      
 
 ### Public Endpoints
 
@@ -60,7 +60,7 @@ Parameters:
 NO PARAMETERS REQUIRED
 ```
 
-Respones:
+Responses:
 ```
 {
     "timezone": "UTC",
@@ -281,7 +281,7 @@ Parameters:
 }
 ```
 
-Respones:
+Responses:
 ```
 {
     "status": "success",
@@ -312,7 +312,7 @@ Parameters:
 NO PARAMETERS REQUIRED
 ```
 
-Respones:
+Responses:
 ```
 {
     "status":"success",
@@ -340,7 +340,7 @@ Parameters:
 NO PARAMETERS REQUIRED
 ```
 
-Respones:
+Responses:
 ```
 {
     "status": "success",
@@ -377,7 +377,7 @@ Parameters:
 }
 ```
 
-Respones:
+Responses:
 ```
 {
     "status": "success",
@@ -414,14 +414,14 @@ Parameters:
 }
 ```
 
-Respones:
+Responses:
 ```
 {
     "status": "success", // return "fail" if request failed
     "ch": "market.btc_usdt.trade.detail", // will not be used
     "err_no": 0, // 0 for successful request and 99992 for request too frequently
     "msg": "success", // return message
-    "timestamp": 1543402521132, //respones time
+    "timestamp": 1543402521132, //Responses time
     "data": [ // entry list of transactions
         {
             "timestamp": 1543402413, // when this transaction was finished
@@ -448,7 +448,7 @@ Parameters:
 }
 ```
 
-Respones:
+Responses:
 ```
 {
     "status": "success",
@@ -488,7 +488,7 @@ Parameters:
 }
 ```
 
-Respones:
+Responses:
 ```
 {
     "status": "success",
@@ -537,7 +537,7 @@ Parameters:
 }
 ```
 
-Respones:
+Responses:
 ```
 {
     "status": "success",
@@ -585,7 +585,7 @@ Parameters:
 }
 ```
 
-Respones:
+Responses:
 ```
 {
     "status": "success",
@@ -630,7 +630,7 @@ Parameter:
 }
 ```
 
-Respones:
+Responses:
 ```
 {
     "status": "success",
@@ -667,7 +667,7 @@ Parameter:
 }
 ```
 
-Respones:
+Responses:
 ```
 {
     "status": "success",
@@ -702,7 +702,7 @@ Parameter:
 }
 ```
 
-Respones:
+Responses:
 ```
 {
     "status": "success",
@@ -743,7 +743,7 @@ Parameter:
 }
 ```
 
-Respones:
+Responses:
 ```
 {
     "status": "success",
