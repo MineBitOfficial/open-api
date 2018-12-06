@@ -531,18 +531,18 @@ and the following steps are necessary.
 b. Add secretkey to the end of the parameter string ,then encrypt the string with MD5. The encrypted string needs to be uppercase.just get the signature now.Merge &signature=signature with the parameters string derived from a.
 ```
 
-call api：https://api.minebit.com/openapi/v1/trade/order
-request method：post
-request parameter：
-accesskey=app_key
-signature=BCC7C71CF93F9CDBDB88671B701D8A35
-timestamp=1534591800543
-parameter1=value1
-parameter2 =value2
-…….
+call api：https://api.minebit.com/openapi/v1/trade/order  
+request method：post    
+request parameter：    
+accesskey=app_key    
+signature=BCC7C71CF93F9CDBDB88671B701D8A35    
+timestamp=1534591800543    
+parameter1=value1    
+parameter2 =value2    
+…….    
 
-Note：The secretkey is only used for encryption. Please do not use it in the request parameters in case of data leakage.
-As above,the timestamp will be used to verify whether or not the request is expired.So even if the request link is been taken entirely,the data will be secure.
+Note：The secretkey is only used for encryption. Please do not use it in the request parameters in case of data leakage.    
+As above,the timestamp will be used to verify whether or not the request is expired.So even if the request link is been taken entirely,the data will be secure.    
 
 <details><summary>Unexcuted Orders Detail</summary>
 
