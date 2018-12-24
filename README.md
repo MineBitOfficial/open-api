@@ -762,7 +762,7 @@ Parameter:
     "symbol"    : "trading pair",
     "offset"    : 0, 
     "limit"     : 10, // how much entries will be return
-    "type"      : 1,  // 1 limit order, 2 market order (optional)
+    "type"      : 1,  // 1 limit order, 2 market order (temporary disabled)
     "side"      : 0,  // 0=>all, 1=>for buying, 2=>for selling 
 }
 ```
