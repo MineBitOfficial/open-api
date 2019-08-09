@@ -605,7 +605,7 @@ Parameters:
     "offset"    : 0, 
     "limit"     : 10, // how much entries will be return
     "type"      : 1,  // 1 limit order, 2 market order (optional)
-    "side"      : 0,  // 0=>all, 1=>for buying, 2=>for selling 
+    "side"      : 0,  // 0=>all, 1=>for selling, 2=>for buying 
 }
 ```
 
